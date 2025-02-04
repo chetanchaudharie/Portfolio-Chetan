@@ -1,0 +1,198 @@
+.portfolio {
+  background-color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Inter, sans-serif;
+}
+
+.main {
+  padding: 0 80px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.heroContent {
+  max-width: 50%;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+.heroSubtitle {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #555;
+}
+
+.heroDescription {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #777;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.primaryButton {
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
+  padding: 15px 43px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and transform */
+}
+
+.primaryButton:hover {
+  background-color: rgba(0, 0, 0, 1); /* Darker background on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.primaryButton:active {
+  transform: translateY(1px); /* Slight push effect when clicked */
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly lighter background when clicked */
+}
+
+
+.heroImage {
+  max-width: 45%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.skills,
+.services {
+  margin-top: 150px;
+}
+
+.sectionTitle {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Portfolio.module.css */
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Adjust the minmax value as needed */
+  gap: 20px;  /* Adjust space between cards */
+  justify-items: center;
+}
+
+
+.contact {
+  background-color: rgba(174, 215, 41, 0.25);
+  margin-top: 100px;
+  padding: 50px;
+}
+
+.contactTitle {
+  color: rgb(2, 136, 159);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.contactImage {
+  max-width: 40%;
+  height: auto;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  margin-bottom: 30px;
+}
+
+.emailContainer,
+.phoneContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(2, 136, 159);
+  font-weight: 700;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+}
+
+.copyright {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .main {
+    padding: 0 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .heroImage {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .skillsGrid,
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactImage {
+    max-width: 100%;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+}

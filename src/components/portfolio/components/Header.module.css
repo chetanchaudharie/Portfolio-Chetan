@@ -1,0 +1,36 @@
+.header {
+  background-color: #fcfcfc;
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 20px;
+  font-family: Inter, sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px 80px;
+}
+
+.logo {
+  font-size: 44px;
+}
+
+.navigation {
+  display: flex;
+  margin-top: 19px;
+  gap: 22px;
+  font-size: 20px;
+}
+
+.navItem {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}

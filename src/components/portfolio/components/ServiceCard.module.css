@@ -1,0 +1,58 @@
+.serviceCard {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.75s ease, box-shadow 0.75s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;  /* Ensure full width within grid column */
+  height: 250px;  /* Ensure height is consistent for square shape */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #666;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+}
+
+.hovered .description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.serviceCard:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  transition: opacity 0.75s ease;
+  opacity: 0;
+}
+
+.serviceCard:hover:before {
+  opacity: 1;
+}

@@ -1,0 +1,80 @@
+.skillIconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.skillIcon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+.skillIcon:hover {
+  box-shadow: 0 4px 8px #fcfcfc;
+  transform: scale(1.5);
+}
+
+.skillIcon:focus {
+  outline: 2px solid #1f029f;
+  outline-offset: 2px;
+}
+
+.skillText {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.skillsSection {
+  margin-top: 50px;
+  padding: 0 10px;
+}
+
+.skillsGrid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skillCard {
+  background-color: #fcfcfc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  min-width: 250px;
+}
+
+/* For medium-sized screens */
+@media (max-width: 1024px) {
+  .skillsGrid {
+    justify-content: center;
+  }
+
+  .skillCard {
+    width: 45%;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .skillsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skillCard {
+    width: 90%;
+  }
+
+  .skillRow {
+    flex-direction: column;
+    align-items: center;
+  }
+}
